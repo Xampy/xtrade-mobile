@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Xrade</string>
+    <string name="volatility_100_index">Volatility 100 index</string>
+    <string name="buy">Buy</string>
+    <string name="rsi">RSI</string>
+    <string name="_30">20</string>
+    <string name="_80">80</string>
+    <string name="range_cross">Range cross</string>
+    <string name="stoch">Stoch</string>
+    <string name="sell">Sell</string>
+</resources>

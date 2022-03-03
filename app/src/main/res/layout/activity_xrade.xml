@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="20dp"
+    tools:context=".XradeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="45sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_settings_white"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="20dp"
+               android:orientation="vertical">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                       android:layout_width="70dp"
+                       android:layout_height="95dp"
+                       android:src="@drawable/ic_dollar_triangle_white"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintRight_toRightOf="parent"
+                       android:layout_marginRight="30dp"/>
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.xampy.xrade.custom_view.XradeSignalView
+                    android:id="@+id/xrade_volatility_100_index"
+                    android:layout_width="match_parent"
+                    app:signal_name="Volatility 100 Index - H1"
+                    android:layout_height="wrap_content"/>
+
+
+               <com.xampy.xrade.custom_view.XradeSignalView
+                   android:id="@+id/xrade_volatility_10_index"
+                   android:layout_width="match_parent"
+                   app:signal_name="Volatility 10 Index - H1"
+                   android:layout_marginTop="30dp"
+                   android:layout_height="wrap_content"/>
+
+               <com.xampy.xrade.custom_view.XradeSignalView
+                   android:id="@+id/xrade_volatility_25_index"
+                   android:layout_width="match_parent"
+                   app:signal_name="Volatility 25 Index - H1"
+                   android:layout_marginTop="30dp"
+                   android:layout_height="wrap_content"/>
+
+               <com.xampy.xrade.custom_view.XradeSignalView
+                   android:id="@+id/xrade_volatility_50_index"
+                   android:layout_width="match_parent"
+                   app:signal_name="Volatility 50 Index - H1"
+                   android:layout_marginTop="30dp"
+                   android:layout_height="wrap_content"/>
+
+               <com.xampy.xrade.custom_view.XradeSignalView
+                   android:id="@+id/xrade_volatility_75_index"
+                   android:layout_width="match_parent"
+                   app:signal_name="Volatility 10 Index - H1"
+                   android:layout_marginTop="30dp"
+                   android:layout_height="wrap_content"/>
+
+               <com.xampy.xrade.custom_view.XradeSignalView
+                   android:id="@+id/xrade_boom_1000_index"
+                   android:layout_width="match_parent"
+                   app:signal_name="Boom 1000 Index - H1"
+                   android:layout_marginTop="30dp"
+                   android:layout_height="wrap_content"/>
+
+               <com.xampy.xrade.custom_view.XradeSignalView
+                   android:id="@+id/xrade_crash_1000_index"
+                   android:layout_width="match_parent"
+                   app:signal_name="Crash 1000 Index - H1"
+                   android:layout_marginTop="30dp"
+                   android:layout_height="wrap_content"/>
+
+               <!--<FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="20dp">
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <androidx.constraintlayout.widget.ConstraintLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textColor="@color/white"
+                               android:textSize="20sp"
+                               android:text="@string/volatility_100_index"
+                               app:layout_constraintTop_toTopOf="parent"
+                               app:layout_constraintBottom_toBottomOf="parent"
+                               app:layout_constraintLeft_toLeftOf="parent"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textColor="@color/black_yellow"
+                               android:layout_marginRight="20dp"
+                               android:textSize="25sp"
+                               android:text="@string/buy"
+                               app:layout_constraintTop_toTopOf="parent"
+                               app:layout_constraintBottom_toBottomOf="parent"
+                               app:layout_constraintRight_toRightOf="parent"/>
+
+
+                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+                       <FrameLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:paddingTop="15dp"
+                           android:paddingBottom="15dp"
+                           android:paddingLeft="30dp"
+                           android:paddingRight="30dp"
+                           android:background="@drawable/default_indicator_back_rounded"
+                           android:layout_marginTop="20dp">
+                           <androidx.constraintlayout.widget.ConstraintLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:orientation="vertical"
+                                   app:layout_constraintTop_toTopOf="parent"
+                                   app:layout_constraintBottom_toBottomOf="parent"
+                                   app:layout_constraintLeft_toLeftOf="parent">
+                                   <TextView
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:text="@string/rsi"
+                                       android:textSize="30sp"
+                                       android:textColor="@color/white"
+                                       />
+                                   <TextView
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_gravity="center_horizontal"
+                                       android:text="50.03"
+                                       android:textSize="15sp"
+                                       android:textColor="@color/black_yellow"/>
+                               </LinearLayout>
+
+
+                               <FrameLayout
+                                   android:layout_width="150dp"
+                                   android:layout_height="wrap_content"
+                                   app:layout_constraintTop_toTopOf="parent"
+                                   app:layout_constraintBottom_toBottomOf="parent"
+                                   app:layout_constraintRight_toRightOf="parent">
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:orientation="vertical">
+                                       <androidx.constraintlayout.widget.ConstraintLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content">
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:text="@string/_80"
+                                               android:textSize="20sp"
+                                               android:textColor="@color/white"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintLeft_toLeftOf="parent"/>
+
+                                           <LinearLayout
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:orientation="horizontal"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintRight_toRightOf="parent">
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:layout_marginLeft="50dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                           </LinearLayout>
+                                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                       <androidx.constraintlayout.widget.ConstraintLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_marginTop="25dp"
+                                           android:layout_height="wrap_content">
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:text="@string/range_cross"
+                                               android:textColor="@color/white"
+                                               android:textSize="17sp"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintRight_toRightOf="parent"/>
+                                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                       <androidx.constraintlayout.widget.ConstraintLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_marginTop="25dp"
+                                           android:layout_height="wrap_content">
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:text="@string/_30"
+                                               android:textSize="20sp"
+                                               android:textColor="@color/white"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintLeft_toLeftOf="parent"/>
+
+                                           <LinearLayout
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:orientation="horizontal"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintRight_toRightOf="parent">
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:layout_marginLeft="50dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                           </LinearLayout>
+                                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                   </LinearLayout>
+                               </FrameLayout>
+                           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                       </FrameLayout>
+
+
+
+
+
+
+
+
+                       <FrameLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:paddingTop="15dp"
+                           android:paddingBottom="15dp"
+                           android:paddingLeft="30dp"
+                           android:paddingRight="30dp"
+                           android:background="@drawable/default_indicator_back_rounded"
+                           android:layout_marginTop="25dp">
+                           <androidx.constraintlayout.widget.ConstraintLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:orientation="vertical"
+                                   app:layout_constraintTop_toTopOf="parent"
+                                   app:layout_constraintBottom_toBottomOf="parent"
+                                   app:layout_constraintLeft_toLeftOf="parent">
+                                   <TextView
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:text="@string/stoch"
+                                       android:textSize="30sp"
+                                       android:textColor="@color/white"
+                                       app:layout_constraintTop_toTopOf="parent"
+                                       app:layout_constraintBottom_toBottomOf="parent"
+                                       app:layout_constraintLeft_toLeftOf="parent"/>
+                                   <TextView
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_gravity="center_horizontal"
+                                       android:text="50.03 - 30.00"
+                                       android:textSize="15sp"
+                                       android:textColor="@color/black_yellow"/>
+                               </LinearLayout>
+
+
+                               <FrameLayout
+                                   android:layout_width="150dp"
+                                   android:layout_height="wrap_content"
+                                   app:layout_constraintTop_toTopOf="parent"
+                                   app:layout_constraintBottom_toBottomOf="parent"
+                                   app:layout_constraintRight_toRightOf="parent">
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:orientation="vertical">
+                                       <androidx.constraintlayout.widget.ConstraintLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content">
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:text="@string/_80"
+                                               android:textSize="20sp"
+                                               android:textColor="@color/white"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintLeft_toLeftOf="parent"/>
+
+                                           <LinearLayout
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:orientation="horizontal"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintRight_toRightOf="parent">
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:layout_marginLeft="50dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                           </LinearLayout>
+                                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                       <androidx.constraintlayout.widget.ConstraintLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_marginTop="25dp"
+                                           android:layout_height="wrap_content">
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:text="@string/range_cross"
+                                               android:visibility="invisible"
+                                               android:textColor="@color/white"
+                                               android:textSize="17sp"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintRight_toRightOf="parent"/>
+                                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                       <androidx.constraintlayout.widget.ConstraintLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_marginTop="25dp"
+                                           android:layout_height="wrap_content">
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:text="@string/_30"
+                                               android:textSize="20sp"
+                                               android:textColor="@color/white"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintLeft_toLeftOf="parent"/>
+
+                                           <LinearLayout
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:orientation="horizontal"
+                                               app:layout_constraintTop_toTopOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintRight_toRightOf="parent">
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:src="@drawable/ic_green_circle"/>
+                                               <ImageView
+                                                   android:layout_width="20dp"
+                                                   android:layout_height="20dp"
+                                                   android:layout_marginLeft="50dp"
+                                                   android:src="@drawable/ic_red_circle"/>
+                                           </LinearLayout>
+                                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                   </LinearLayout>
+                               </FrameLayout>
+                           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                       </FrameLayout>
+                       <FrameLayout
+                           android:layout_width="100dp"
+                           android:layout_height="5dp"
+                           android:layout_gravity="center_horizontal"
+                           android:background="@color/white"
+                           android:layout_marginTop="20dp">
+
+                       </FrameLayout>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+               </FrameLayout>-->
+
+
+           </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
